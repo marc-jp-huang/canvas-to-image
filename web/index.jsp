@@ -32,6 +32,9 @@
                           <span class="glyphicon glyphicon-cloud-upload"></span>Upload Image
                       </button>
                       <input id="fileToUpload" type="file" name="fileToUpload">
+                      <br/>
+                      <label for="caption1">Head Caption: </label><input type="text" id="caption1" placeholder="Head caption"/><br/>
+                      <label for="caption2">Bottom Caption: </label><input type="text" id="caption2" placeholder="Bottom caption"/><br/>
                   </div>
               </div>
           </div>

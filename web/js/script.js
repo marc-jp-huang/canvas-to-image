@@ -58,3 +58,35 @@ function setImageToCanvas(filename){
     };
     img.src = filename;
 }
+
+$("#caption1").on("keyup",function(){
+    drawText($(this).val(),"head");
+});
+$("#caption2").on("keyup",function(){
+    drawText($(this).val(),"bottom");
+});
+
+function drawText(text,where){
+    cleanArea(where);
+    var canvas = document.getElementById("myCanvas");
+    var textX = canvas.width/2;
+    var textY = 12;
+    if(where=="bottom"){
+        textY = canvas.height-2;
+    }
+    var ctx = canvas.getContext("2d");
+    ctx.font = "14px Arial";
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+    ctx.fillText(text, textX, textY);
+}
+function cleanArea(where){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "black";
+    var areaY = 0;
+    if(where=="bottom"){
+        areaY = canvas.height-15;
+    }
+    ctx.fillRect(0,areaY,canvas.width,15);
+}
