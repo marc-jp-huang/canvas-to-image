@@ -19,6 +19,7 @@
               <canvas id="myCanvas">
               </canvas>
           </div>
+          <button id="save">Save</button>
       </div>
       <div class="row">
           <div class="col-xs-12">
